@@ -63,10 +63,24 @@
 }
 nav ul {
   list-style-type: none;
-  text-align: center;
-  border: 1px black dashed;
   float: right;
+  width: 20%;
 }
+nav ul li {
+  margin-right: 10px;
+}
+
 #create {
   visibility: hidden;
+}
+
+nav form {
+  width: 50%;
+  float: right;
+  visibility: hidden;
+}
+#name {
+  float: right;
+  font-size: 20px;
+  color: #1BBC9B;
 }

@@ -34,6 +34,7 @@ $(document).ready(function() {
         $('#create input').css("visibility", "visible");
         $('nav ul li #name').text(response.name);
         $('div.user_surveys').css("visibility", "visible");
+        $('nav form input').css("visibility", "visible");
       })
     }
   })
@@ -68,6 +69,7 @@ $(document).ready(function() {
           $('#create input').css("visibility", "visible");
           $('nav ul li#name').text(response.name);
           $('div.user_surveys').css("visibility", "visible");
+          $('nav form input').css("visibility", "visible");
       })
     }
   });
@@ -78,7 +80,7 @@ $(document).ready(function() {
 
     var request = $.ajax({
       url: "/signout",
-      type: "get",
+      type: "get"
       })
 
     request.done(function(respone){
@@ -92,6 +94,7 @@ $(document).ready(function() {
       $('#create input').css("visibility", "hidden");
       $('nav ul li#name').text('');
       $('div.user_surveys').css("visibility", "hidden");
+      $('nav form input').css("visibility", "hidden");
     })
   })
 
