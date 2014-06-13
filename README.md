@@ -1,6 +1,6 @@
 Survey_Buzz
 ===========
-
+![](survey_buzz_schema.png)
 User
 create account, log in/ log out, create survey, delete survey, edit survey
 see all their surveys
