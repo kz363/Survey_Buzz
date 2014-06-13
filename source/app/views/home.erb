@@ -1,11 +1,10 @@
-
 <div id="modal">
   <div class="signin">
     <h3>Sign In</h3>
     <form action="/signin" method="post">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="Sign In">
+      <input id="button" type="submit" value="Sign In">
     </form>
   </div>
   <div class="signup">
@@ -14,7 +13,7 @@
       <input type="text" name="name" placeholder="Name">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="Sign Up">
+      <input id="button" type="submit" value="Sign Up">
     </form>
   </div>
 </div>
@@ -36,25 +35,28 @@
 
 <div id='homepage'>
   <div class='surveys'>
+    <h2>Surveys</h2>
     <% if @surveys %>
     <ul>
       <% @surveys.each do |survey| %>
-      <li><%=survey.title %></li>
+      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% end %>
   </div>
-  <% if @user_surveys %>
   <div class='user_surveys'>
+    <h2>Your Surveys</h2>
+    <% if @user_surveys %>
     <ul>
       <% @user_surveys.each do |survey| %>
-      <li><%=survey.title %></li>
+      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
       <% end %>
     </ul>
+    <% else %>
+    <h3>You need to make some surveys!</h3>
     <% end %>
-<!--     <form action="/survey/new" method="get">
-      <input type="submit" value="Create new survey">  bad
-    </form> -->
+
     <div id="create_new_survey"><a href="">New Survey</a></div>
+
   </div>
 </div>

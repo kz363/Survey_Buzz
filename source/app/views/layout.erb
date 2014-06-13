@@ -22,16 +22,10 @@
   <h1>Survey Buzz</h1>
   <nav>
     <ul>
-      <% if @name %>
-      <li><%=@name%></li>
-      <li>
         <form action='/signout' method="get">
-          <input type="submit" value="Sign Out">
+          <li><input type="submit" value="Sign Out"><li>
         </form>
-      </li>
-      <% end %>
-      <li>
-      </li>
+        <li id="name"> </li>
     </ul>
   </nav>
 </div>
