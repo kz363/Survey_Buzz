@@ -1,24 +1,30 @@
 get '/' do
   @surveys = Survey.all
-  @user_surveys = Survey.where(id:session[:user_id])
+  @user_surveys = Survey.where(id: session[:user_id])
   erb :home
 end
 
 post '/signin' do
-  @user = User.where(email:params[:email])
+  @user = User.where(email:params[:email]).first
   @user.authenticate(params[:password])
   session[:user_id] = @user.id
+  session[:user_name] = @user.name
   @name = @user.name
   content_type :JSON
-  (@name).to_json
+  {name:@name}.to_json
 end
 
 post '/signup' do
-  @user = User.create(name:params[:name], email: params[:email], password_hash:params[:password])
-  session[:user_id] = @user.id
-  @name = @user.name
-  content_type :JSON
-  (@name).to_json
+  @user = User.new(name:params[:name], email: params[:email], password:params[:password])
+  if @user.save
+    session[:user_id] = @user.id
+    session[:user_name] = @user.name
+    @name = @user.name
+    content_type :JSON
+    {name:@name}.to_json
+  else
+    404
+  end
 end
 
 # get '/user/surveys' do
