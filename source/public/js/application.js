@@ -18,11 +18,11 @@ $(document).ready(function() {
   var questionCount = 2;
   $( document ).on('click', '#add_question', function(event){
     event.preventDefault();
-    currentQuestion = $('#new_survey div.question').length;
     questionTotal++;
     $( '#new_survey div.question' ).hide();
-    var question = '<a href="" id="question_'+questionTotal+'">Question '+questionTotal+'</a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
+    var question = '<a href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
     $( '#new_survey form input:eq(-1)').before(question);
+    currentQuestion = $('#new_survey div.question').length;
   });
 
   $( document ).on('click', '.remove_button', function(event){
