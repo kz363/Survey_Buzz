@@ -8,3 +8,7 @@
 #header h1 {
   color: #1BBC9B;
 }
+
+#new_survey {
+  display: none;
+}

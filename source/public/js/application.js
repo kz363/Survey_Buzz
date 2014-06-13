@@ -1,7 +1,40 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  var currentQuestion = 1;
+  var questionTotal = 1;
+  $( document ).on('click', '#create_new_survey', function(event){
+    event.preventDefault();
+    $( '#create_new_survey' ).hide();
+    $( '#new_survey' ).show();
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  var optionCount = 2;
+  $( document ).on('click', '#add_option', function(event){
+    event.preventDefault();
+    var option = '<div id="field'+optionCount+'"><input type="text" name="answer'+optionCount+'" placeholder="Option"> <a href=""><button id="'+optionCount+'" class="remove_button" type="button">Remove</button></a></div>';
+    $( '#new_survey form #question_'+currentQuestion ).next().append(option);
+    optionCount++;
+  });
+
+  var questionCount = 2;
+  $( document ).on('click', '#add_question', function(event){
+    event.preventDefault();
+    currentQuestion = $('#new_survey div.question').length;
+    questionTotal++;
+    $( '#new_survey div.question' ).hide();
+    var question = '<a href="" id="question_'+questionTotal+'">Question '+questionTotal+'</a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
+    $( '#new_survey form input:eq(-1)').before(question);
+  });
+
+  $( document ).on('click', '.remove_button', function(event){
+    event.preventDefault();
+    var id = $(this).attr("id");
+    $( "#field"+id ).remove();
+  });
+
+  $( document ).on('click', '[id^=question]', function(event){
+    event.preventDefault();
+    currentQuestion = parseInt($(this).attr("id").slice(-1),10);
+    $( '#new_survey div.question' ).hide();
+    $(this).next().show();
+  });
 });

@@ -1,7 +1,7 @@
 
 <div id="modal">
   <div class="signin">
-  <h3>Sign In</h3>
+    <h3>Sign In</h3>
     <form action="/signin" method="post">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
@@ -9,8 +9,8 @@
     </form>
   </div>
   <div class="signup">
-  <h3>Sign Up</h3>
-      <form action="/signup" method="post">
+    <h3>Sign Up</h3>
+    <form action="/signup" method="post">
       <input type="text" name="name" placeholder="Name">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
@@ -18,27 +18,41 @@
     </form>
   </div>
 </div>
+<div id='new_survey'>
+  <form action="/survey/new" method="post">
+    <input type="text" name="title" placeholder="Title">
+    <a href="" id="question_1">Question 1</a>
+    <div class='question'>
+      <input type="text" name="question_1" placeholder="Survey Question">
+      <input type="text" name="answer_1" placeholder="Option">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  <a href=""><button id="add_question" type="button">Add Question</button></a>
+  <a href=""><button id="add_option" type="button">It's a button kevin</button></a>
+</div>
 
 <div id='homepage'>
   <div class='surveys'>
     <% if @surveys %>
     <ul>
-    <% @surveys.each do |survey| %>
-    <li><%=survey.title %></li>
-    <% end %>
+      <% @surveys.each do |survey| %>
+      <li><%=survey.title %></li>
+      <% end %>
     </ul>
     <% end %>
   </div>
   <% if @user_surveys %>
-    <div class='user_surveys'>
+  <div class='user_surveys'>
     <ul>
-    <% @user_surveys.each do |survey| %>
-    <li><%=survey.title %></li>
-    <% end %>
+      <% @user_surveys.each do |survey| %>
+      <li><%=survey.title %></li>
+      <% end %>
     </ul>
     <% end %>
-    <form action="/survey/new" method="get">
-      <input type="submit" value="Create new survey">
-    </form>
+<!--     <form action="/survey/new" method="get">
+      <input type="submit" value="Create new survey">  bad
+    </form> -->
+    <div id="create_new_survey"><a href="">New Survey</a></div>
   </div>
 </div>
