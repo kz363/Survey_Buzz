@@ -1,7 +1,6 @@
-
 <div id="modal">
   <div class="signin">
-  <h3>Sign In</h3>
+    <h3>Sign In</h3>
     <form action="/signin" method="post">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
@@ -9,8 +8,8 @@
     </form>
   </div>
   <div class="signup">
-  <h3>Sign Up</h3>
-      <form action="/signup" method="post">
+    <h3>Sign Up</h3>
+    <form action="/signup" method="post">
       <input type="text" name="name" placeholder="Name">
       <input type="text" name="email" placeholder="Email">
       <input type="password" name="password" placeholder="Password">
@@ -19,32 +18,45 @@
   </div>
 </div>
 
+<div id='new_survey'>
+  <form action="/survey/new" method="post">
+    <input type="text" name="title" placeholder="Title">
+
+    <br><a href="" id="question_1"><h4>Question 1</h4></a>
+    <div class='question'>
+      <input type="text" name="question_1" placeholder="Survey Question"><br>
+      <input type="text" name="answer_1" placeholder="Option">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  <a href=""><button id="add_question" type="button">Add Question</button></a>
+  <a href=""><button id="add_option" type="button">+</button></a>
+</div>
+
 <div id='homepage'>
   <div class='surveys'>
     <h2>Surveys</h2>
     <% if @surveys %>
     <ul>
-    <% @surveys.each do |survey| %>
-    <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
-    <% end %>
+      <% @surveys.each do |survey| %>
+      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
+      <% end %>
     </ul>
     <% end %>
   </div>
   <div class='user_surveys'>
     <h2>Your Surveys</h2>
     <% if @user_surveys %>
-        <ul>
-          <% @user_surveys.each do |survey| %>
-          <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
-          <% end %>
-        </ul>
+    <ul>
+      <% @user_surveys.each do |survey| %>
+      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
+      <% end %>
+    </ul>
     <% else %>
-      <h3>You need to make some surveys!</h3>
+    <h3>You need to make some surveys!</h3>
     <% end %>
 
-    <form id = "create" action="/survey/new" method="get">
-      <input type="submit" value="Create new survey">
-    </form>
+    <div id="create_new_survey"><a href="">New Survey</a></div>
 
   </div>
 </div>
