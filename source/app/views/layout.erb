@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -18,6 +18,23 @@
   <title></title>
 </head>
 <body>
+<div id="header">
+  <h1>Survey Buzz</h1>
+  <nav>
+    <ul>
+      <% if @name %>
+      <li><%=@name%></li>
+      <li>
+        <form action='/signout' method="get">
+          <input type="submit" value="Sign Out">
+        </form>
+      </li>
+      <% end %>
+      <li>
+      </li>
+    </ul>
+  </nav>
+</div>
   <%= yield %>
 </body>
 </html>
