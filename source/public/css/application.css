@@ -1,10 +1,86 @@
+#homepage {
+  margin-top: 100px;
+}
+
 #header {
   background-color: #2D3E50;
   width: 100%;
+  height: 100px;
   position: fixed;
   top: 0px;
   left:0px;
 }
 #header h1 {
+  color: #1BBC9B;
+  float: left;
+  font-size: 40px;
+}
+
+#modal {
+  border: 2px solid black;
+  background-color: #1BBC9B;
+  width: 500px;
+  height: 300px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  padding: 20px;
+  visibility: visible;
+
+}
+
+.signin {
+  width: 49%;
+  float: left;
+  border-right: 2px solid black;
+  height: 100%;
+}
+
+.signup {
+  width: 49%;
+  float: right;
+  height: 100%;
+}
+
+#modal input {
+  margin: 15px;
+}
+
+.surveys {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  visibility: hidden;
+}
+
+.user_surveys {
+  position:fixed;
+  height: 100%;
+  float: left;
+  width: 20%;
+  background-color: #1BBC9B;
+  visibility: hidden;
+}
+nav ul {
+  list-style-type: none;
+  float: right;
+  width: 20%;
+}
+nav ul li {
+  margin-right: 10px;
+}
+
+#create {
+  visibility: hidden;
+}
+
+nav form {
+  width: 50%;
+  float: right;
+  visibility: hidden;
+}
+#name {
+  float: right;
+  font-size: 20px;
   color: #1BBC9B;
 }
