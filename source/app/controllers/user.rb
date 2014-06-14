@@ -1,7 +1,6 @@
 get '/' do
   @surveys = Survey.all
-  @user_surveys = Survey.where(id: session[:user_id])
-  session.inspect
+  @user_surveys = Survey.where(user_id: session[:user_id])
   erb :home
 end
 
@@ -19,7 +18,6 @@ post '/signup' do
   @user = User.new(name:params[:name], email: params[:email], password:params[:password])
   if @user.save
     session[:user_id] = @user.id
-    session[:user_name] = @user.name
     @name = @user.name.capitalize
     content_type :JSON
     {name:@name}.to_json

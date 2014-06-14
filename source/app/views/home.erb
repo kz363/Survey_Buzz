@@ -18,8 +18,9 @@
   </div>
 </div>
 
-<!-- <div id='new_survey'>
-  <form action="/survey/new" method="post">
+<div id='new_survey'>
+  <form id="survey_form" action="/survey/new" method="post">
+    <input type="hidden" name="user_id" value="<%=session[:user_id]%>">
     <input type="text" name="title" placeholder="Title">
 
     <br><a href="" id="question_1"><h4>Question 1</h4></a>
@@ -31,7 +32,7 @@
   </form>
   <a href=""><button id="add_question" type="button">Add Question</button></a>
   <a href=""><button id="add_option" type="button">+</button></a>
-</div> -->
+</div>
 
 <div id='homepage'>
   <div class='surveys'>
@@ -39,7 +40,7 @@
     <% if @surveys %>
     <ul id="all_surveys" class="imglist">
       <% @surveys.each do |survey| %>
-      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
+      <li><a href=""><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% end %>
@@ -50,15 +51,13 @@
     <% if @user_surveys %>
     <ul class="your_surveys">
       <% @user_surveys.each do |survey| %>
-      <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
+      <li><a href=""><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% else %>
     <h3>You need to make some surveys!</h3>
     <% end %>
-    <form action="/new_survey" method="get">
-      <input type="submit" value="New Survey">
-    </form>
+    <button id="create_new_survey" type="button">New Survey</button>
 
   </div>
 </div>
