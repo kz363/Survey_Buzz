@@ -142,7 +142,9 @@ text-align: center;
 .user_surveys form input {
   background-image: linear-gradient(#FFFFFF,#D1CCD2);
   text-align: center;
+
   margin:0 auto;
+
 }
 
 nav ul {
@@ -156,6 +158,10 @@ nav ul li {
 
 #create {
   visibility: hidden;
+}
+
+#all_surveys {
+  border: 2px solid black;
 }
 
 nav form {
