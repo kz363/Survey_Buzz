@@ -1,7 +1,3 @@
-get '/' do
-  erb :home
-end
-
-get '/survey/new' do
-
+get '/new_survey' do
+  erb :new_survey
 end

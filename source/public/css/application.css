@@ -16,6 +16,10 @@
   font-size: 40px;
 }
 
+#new_survey {
+  padding-top: 200px;
+}
+
 #modal {
   border: 2px solid black;
   background-color: #1BBC9B;
@@ -86,25 +90,9 @@ nav form {
 }
 
 #new_survey form {
-  /*display: none;*/
   width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.signin {
-  display: none;
-}
 
-.signup {
-  display: none;
-}
-
-body {
-  padding-top: 180px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
