@@ -8,7 +8,6 @@
   right: 0;
   z-index: -1;
 
-
   background-image: url('../hummingbird3.JPG');
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +20,7 @@
   -ms-filter: blur(7px);
   filter: blur(7px);
 }
+
 body {
   font-family: 'Josefin Slab', serif;
   color: #333;
@@ -59,6 +59,8 @@ img.bird {
   display: inline-block;
   text-decoration: none;
   margin: 0px auto 0px auto;
+  width: 150px;
+  margin: 0 auto;
 }
 
 button, input, optgroup, select, textarea {
@@ -100,8 +102,8 @@ button, input, optgroup, select, textarea {
 }
 
 #modal h3 {
-font-size: 30px;
-text-align: center;
+  font-size: 30px;
+  text-align: center;
 }
 
 .signin {
@@ -109,6 +111,14 @@ text-align: center;
   float: left;
   border-right: #303C41 solid 3px;
   height: 100%;
+}
+
+.signin input {
+  font-size: 18px;
+}
+
+.signup input {
+  font-size: 18px;
 }
 
 .signup {
@@ -129,12 +139,17 @@ text-align: center;
   visibility: hidden;
 }
 
+.surveys h2 {
+  font-size: 30px;
+  font-color: #E8E8E8;
+}
+
 .user_surveys {
   position:fixed;
   height: 100%;
   float: left;
   width: 20%;
-  background-color: #D1CCD2;
+  background-color: #E8E8E8;
   visibility: hidden;
   border-right: 1px solid #C3FB48;
 }
@@ -162,6 +177,7 @@ nav ul li {
 
 #all_surveys {
   border: 2px solid black;
+  background-color:rgba(255,0,0,0.5);
 }
 
 nav form {
@@ -182,4 +198,32 @@ nav form {
   margin-right: auto;
 }
 
+/*Cool unordered list*/
+.imglist ul{
+  margin:0px;
+}
 
+.imglist li{
+  font-size:25px;
+  margin-left:25px;
+  padding:0px;
+  list-style:url(/images/arrow.png);
+  line-height:30px;
+}
+
+.imglist li a:link, .imglist li a:visited{
+  color:#007E7A;
+  text-decoration:none;
+}
+
+.imglist li a:hover{
+  color:#303C41;
+  padding:2px;
+  -moz-box-shadow: 0px 0px 12px #C3FB48;
+  -webkit-box-shadow: 0px 0px 12px #C3FB48;
+  box-shadow: 0px 0px 12px #C3FB48;
+  border:none 0px #000000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
