@@ -137,6 +137,8 @@ button, input, optgroup, select, textarea {
   top: 20%;
   left: 35%;
   visibility: hidden;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .surveys h2 {
@@ -149,17 +151,17 @@ button, input, optgroup, select, textarea {
   height: 100%;
   float: left;
   width: 20%;
-  background-color: #E8E8E8;
+  /*background-color: #E8E8E8;*/
+  background: rgba(232, 232, 232, 0.4);
   visibility: hidden;
   border-right: 1px solid #C3FB48;
+  min-width: 300px;
 }
 
 .user_surveys form input {
   background-image: linear-gradient(#FFFFFF,#D1CCD2);
   text-align: center;
-
   margin:0 auto;
-
 }
 
 nav ul {
@@ -167,6 +169,7 @@ nav ul {
   float: right;
   width: 20%;
 }
+
 nav ul li {
   margin-right: 10px;
 }
@@ -176,8 +179,9 @@ nav ul li {
 }
 
 #all_surveys {
-  border: 2px solid black;
-  background-color:rgba(255,0,0,0.5);
+  border: 1px solid #C3FB48;
+  /*background-color: #D1CCD2;*/
+  background:rgba(255,255,255,0.4);
 }
 
 nav form {
@@ -198,6 +202,38 @@ nav form {
   margin-right: auto;
 }
 
+/*Your Surveys*/
+.your_surveys ul{
+  margin:0px;
+}
+
+.your_surveys li{
+  font-size:18px;
+  margin-left:25px;
+  padding:0px;
+  list-style:url(/images/check.png);
+  line-height:30px;
+}
+
+.your_surveys li a:link, .your_surveys li a:visited{
+  color: #303C41;
+  text-decoration:none;
+}
+
+.your_surveys li a:hover{
+  color:#D1CCD2;
+  padding:2px;
+  /*Box Shadows*/
+  /*-moz-box-shadow: 0px 0px 12px #303C41;
+  -webkit-box-shadow: 0px 0px 12px #303C41;
+  box-shadow: 0px 0px 12px #D1CCD2;*/
+  border:none 0px #000000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
 /*Cool unordered list*/
 .imglist ul{
   margin:0px;
@@ -212,16 +248,17 @@ nav form {
 }
 
 .imglist li a:link, .imglist li a:visited{
-  color:#007E7A;
+  color: white;
   text-decoration:none;
 }
 
 .imglist li a:hover{
-  color:#303C41;
+  color:#C3FB48;
   padding:2px;
-  -moz-box-shadow: 0px 0px 12px #C3FB48;
-  -webkit-box-shadow: 0px 0px 12px #C3FB48;
-  box-shadow: 0px 0px 12px #C3FB48;
+  /*Box Shadows*/
+  /*-moz-box-shadow: 0px 0px 12px #303C41;
+  -webkit-box-shadow: 0px 0px 12px #303C41;
+  box-shadow: 0px 0px 12px #D1CCD2;*/
   border:none 0px #000000;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
