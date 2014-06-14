@@ -13,6 +13,7 @@ isLoggedIn.done(function(response) {
     $('nav ul li#name').text(response.name);
     $('div.user_surveys').css("visibility", "visible");
     $('nav form input').css("visibility", "visible");
+    $('.background-image').css("z-index", "-1")
   }
 })
 

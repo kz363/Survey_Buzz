@@ -1,10 +1,40 @@
 #homepage {
   margin-top: 100px;
-}
 
+}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+
+  background-image: url('../hummingbird3.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2200px;
+  height: 1000px;
+
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+}
 body {
   font-family: 'Josefin Slab', serif;
   color: #333;
+
+}
+
+img.bird {
+  height: 60px;
+  width: auto;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  border-radius: 9px;
+  border: 1px solid #C3FB48;
 }
 
 #header {
@@ -40,6 +70,8 @@ button, input, optgroup, select, textarea {
   color: #ffffff;
   float: left;
   font-size: 40px;
+  margin-left: 20px;
+  margin-top: 33px;
 }
 
 #new_survey {
@@ -57,7 +89,7 @@ button, input, optgroup, select, textarea {
 }
 
 #modal {
-  border: #303C41 solid 1px;
+  border: #303C41 solid 3px;
   /*background-color: #fefefe;*/
   background-image: linear-gradient(rgba(255, 255, 255, 0.901961), rgba(220, 236, 255, 0.701961));
   background: linear-gradient(rgba(255,255,255,0.9),rgba(220,236,255,0.7));
@@ -65,11 +97,12 @@ button, input, optgroup, select, textarea {
   height: 300px;
   position: fixed;
   top: 25%;
-  left: 25%;
+  left: 33%;
   padding: 20px;
   visibility: visible;
-  border-radius: 5px;
-  color: #D1CCD2;
+  border-radius: 10px;
+  color: #303C41;
+  box-shadow: 4px 4px 4px #303C41;
 }
 
 button, input, optgroup, select, textarea {
@@ -84,7 +117,7 @@ text-align: center;
 .signin {
   width: 49%;
   float: left;
-  border-right: #eeeeee solid 1px;
+  border-right: #303C41 solid 3px;
   height: 100%;
 }
 
@@ -119,6 +152,9 @@ text-align: center;
 .user_surveys form input {
   background-image: linear-gradient(#FFFFFF,#D1CCD2);
   text-align: center;
+
+  margin:0 auto;
+
 }
 
 nav ul {
@@ -150,3 +186,13 @@ nav form {
   color: #C3FB48;
 }
 
+<<<<<<< HEAD
+=======
+#new_survey form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+>>>>>>> 87cc5d64201db80987c711259293ca52c336e5d3
