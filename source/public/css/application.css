@@ -29,6 +29,8 @@ body {
   display: inline-block;
   text-decoration: none;
   margin: 0px auto 0px auto;
+  width: 150px;
+  margin: 0 auto;
 }
 
 button, input, optgroup, select, textarea {
@@ -67,8 +69,8 @@ button, input, optgroup, select, textarea {
 }
 
 #modal h3 {
-font-size: 30px;
-text-align: center;
+  font-size: 30px;
+  text-align: center;
 }
 
 .signin {
@@ -76,6 +78,11 @@ text-align: center;
   float: left;
   border-right: #eeeeee solid 1px;
   height: 100%;
+}
+
+.signin input {
+  height: 36px;
+  font-size: 18px;
 }
 
 .signup {
@@ -96,12 +103,16 @@ text-align: center;
   visibility: hidden;
 }
 
+.surveys h2 {
+  font-size: 30px;
+}
+
 .user_surveys {
   position:fixed;
   height: 100%;
   float: left;
   width: 20%;
-  background-color: #D1CCD2;
+  background-color: #E8E8E8;
   visibility: hidden;
   border-right: 1px solid #C3FB48;
 }
@@ -144,4 +155,34 @@ nav form {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*Numbered ordered list*/
+.imglist ul{
+  margin:0px;
+}
+
+.imglist li{
+  font-size:25px;
+  margin-left:25px;
+  padding:0px;
+  list-style:url(/images/arrow.png);
+  line-height:30px;
+}
+
+.imglist li a:link, .imglist li a:visited{
+  color:#007E7A;
+  text-decoration:none;
+}
+
+.imglist li a:hover{
+  color:#303C41;
+  padding:2px;
+  -moz-box-shadow: 0px 0px 12px #9e9ea3;
+  -webkit-box-shadow: 0px 0px 12px #9e9ea3;
+  box-shadow: 0px 0px 12px #9e9ea3;
+  border:none 0px #000000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }

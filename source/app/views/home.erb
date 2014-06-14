@@ -37,13 +37,14 @@
   <div class='surveys'>
     <h2>Surveys</h2>
     <% if @surveys %>
-    <ul id="all_surveys">
+    <ul id="all_surveys" class="imglist">
       <% @surveys.each do |survey| %>
       <li><a href="survey/<%=survey.id%>"><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% end %>
   </div>
+
   <div class='user_surveys'>
     <h2>Your Surveys</h2>
     <% if @user_surveys %>
