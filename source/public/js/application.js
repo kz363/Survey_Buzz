@@ -75,10 +75,22 @@ $(document).ready(function() {
       $( '#all_surveys' ).append( "<li><a href=''>"+response.title+"</a></li>" );
       $( '.user_surveys ul' ).append( "<li><a href=''>"+response.title+"</a></li>" );
       $( '#create_new_survey' ).show();
-      $( '.surveys').show();
-      $( '#new_survey' ).hide();
+      $( '.surveys').fadeIn();
+      $( '#new_survey' ).fadeOut();
+      var domain = $("");
+      $( 'div.survey_send_url li a').attr("href", "/surveys/" + response.id);
+      var surveyURL = $( 'div.survey_send_url li a').prop("href");
+      $('div.survey_send_url li a').text(surveyURL);
+      $( 'div.survey_send_url' ).fadeIn();
     });
   });
+
+  $( "button#exit" ).on('click', function(event){
+    event.preventDefault();
+
+    $( 'div.survey_send_url' ).fadeOut();
+  });
+
 
 //////////////////////////SIGN UP/////////////////////////
 

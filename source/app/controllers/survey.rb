@@ -1,6 +1,6 @@
 post '/survey' do
   questionCount = 0
-  survey = Survey.create( title: params[:title],
+  @survey = Survey.create( title: params[:title],
                           user_id: params[:user_id] )
   question = Question.last
 
@@ -8,7 +8,7 @@ post '/survey' do
     if field.to_s.start_with?("question")
       questionCount += 1
       question = Question.create( question: value,
-                                  survey_id: survey.id )
+                                  survey_id: @survey.id )
     elsif field.to_s.start_with?("answer")
       Option.create( option: value,
                      question_id: question.id )
@@ -16,5 +16,6 @@ post '/survey' do
   end
 
   content_type :json
-  {title: survey.title}.to_json
+  {title: @survey.title, id: @survey.id}.to_json
 end
+
