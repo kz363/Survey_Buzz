@@ -14,11 +14,11 @@
   width: 2200px;
   height: 1000px;
 
-  -webkit-filter: blur(7px);
-  -moz-filter: blur(7px);
-  -o-filter: blur(7px);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 
 body {
@@ -38,13 +38,13 @@ img.bird {
 }
 
 #header {
-  background-color: #00ADA9;
+  background-color: #1a1a1a;
   width: 100%;
   height: 100px;
   position: fixed;
   top: 0px;
   left:0px;
-  border-bottom: 1px solid #C3FB48;
+  /*border-bottom: 1px solid #C3FB48;*/
 }
 
 #button {
@@ -69,7 +69,7 @@ button, input, optgroup, select, textarea {
 }
 
 #header h1 {
-  color: #ffffff;
+  color: #0072c6;
   float: left;
   font-size: 40px;
   margin-left: 20px;
@@ -154,7 +154,7 @@ button, input, optgroup, select, textarea {
   /*background-color: #E8E8E8;*/
   background: rgba(232, 232, 232, 0.4);
   visibility: hidden;
-  border-right: 1px solid #C3FB48;
+  /*border-right: 1px solid #C3FB48;*/
   min-width: 300px;
 }
 
@@ -179,9 +179,11 @@ nav ul li {
 }
 
 #all_surveys {
-  border: 1px solid #C3FB48;
+  /*border: 1px solid #C3FB48;*/
   /*background-color: #D1CCD2;*/
   background:rgba(255,255,255,0.4);
+  border-radius: 10px;
+
 }
 
 nav form {
