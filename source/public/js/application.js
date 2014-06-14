@@ -26,6 +26,7 @@ $(document).ready(function() {
   $( document ).on('click', '#create_new_survey', function(event){
     event.preventDefault();
     $( '#create_new_survey' ).hide();
+    $( '.surveys').hide();
     $( '#new_survey' ).show();
   });
 
@@ -45,6 +46,7 @@ $(document).ready(function() {
     var question = '<a href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
     $( '#new_survey form input:eq(-1)').before(question);
     currentQuestion = $('#new_survey div.question').length;
+    $(document).scrollTop($(document).height());
   });
 
   $( document ).on('click', '.remove_button', function(event){
@@ -64,7 +66,16 @@ $(document).ready(function() {
     event.preventDefault();
     var survey_data = $(this).serialize();
     console.log(survey_data);
-
+    var request = $.ajax( { url:"/survey",
+                            type: "POST",
+                            data: survey_data,
+                          });
+    request.done(function(response){
+      $( '#create_new_survey' ).show();
+      $( '.surveys').show();
+      $( '#new_survey' ).hide();
+      alert(response);
+    });
   });
 
 //////////////////////////SIGN UP/////////////////////////

@@ -75,7 +75,6 @@ button, input, optgroup, select, textarea {
 }
 
 #new_survey {
-  padding-top: 200px;
   position: absolute;
   top: 20%;
   left: 35%;
