@@ -152,7 +152,7 @@ button, input, optgroup, select, textarea {
 
 .surveys h2 {
   font-size: 30px;
-  font-color: #E8E8E8;
+  font-color: #fff;
 }
 
 .user_surveys {
@@ -161,7 +161,7 @@ button, input, optgroup, select, textarea {
   float: left;
   width: 20%;
   /*background-color: #E8E8E8;*/
-  background: rgba(232, 232, 232, 0.4);
+  background-color: #454545;
   visibility: hidden;
   /*border-right: 1px solid #C3FB48;*/
   min-width: 300px;
