@@ -1,4 +1,3 @@
-
 var isLoggedIn = $.ajax({
   url: "/isLoggedIn",
   type: "GET"
@@ -18,7 +17,7 @@ isLoggedIn.done(function(response) {
 
 $(document).ready(function() {
 
-//////////////////////////SURVEY STUFF/////////////////////////
+//////////////////////////CREATING SURVEYS/////////////////////////
 
   var currentQuestion = 1;
   var questionTotal = 1;
@@ -64,7 +63,6 @@ $(document).ready(function() {
   $( document ).on('submit', '#survey_form', function(event){
     event.preventDefault();
     var survey_data = $(this).serialize();
-    console.log(survey_data);
 
     var request = $.ajax( { url:"/survey",
                             type: "POST",
@@ -85,10 +83,30 @@ $(document).ready(function() {
     });
   });
 
+
   $( "button#exit" ).on('click', function(event){
     event.preventDefault();
 
     $( 'div.survey_send_url' ).fadeOut();
+  });
+
+
+//////////////////////////TAKING SURVEYS/////////////////////////
+
+  $( document ).on('submit', '#take_survey form', function(event){
+    event.preventDefault();
+    var survey_data = $(this).serialize();
+    console.log(survey_data);
+
+    var request = $.ajax( { url:"/survey",
+                            type: "PUT",
+                            data: survey_data,
+                          });
+
+    request.done(function(response){
+      $( '#take_survey form' ).hide();
+      $( '#take_survey' ).append( "<h1>"+response+"</h1>" );
+    });
   });
 
 

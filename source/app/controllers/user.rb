@@ -8,7 +8,6 @@ post '/signin' do
   @user = User.where(email:params[:email]).first
   @user.authenticate(params[:password])
   session[:user_id] = @user.id
-  session[:user_name] = @user.name
   @name = @user.name.capitalize
   content_type :JSON
   {name:@name}.to_json

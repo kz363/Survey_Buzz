@@ -310,3 +310,7 @@ nav form {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+
+#take_survey {
+  padding-top: 5%;
+}
