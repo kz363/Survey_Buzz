@@ -81,7 +81,10 @@ button, input, optgroup, select, textarea {
 }
 
 .signin input {
-  height: 36px;
+  font-size: 18px;
+}
+
+.signup input {
   font-size: 18px;
 }
 
@@ -157,7 +160,7 @@ nav form {
   margin-right: auto;
 }
 
-/*Numbered ordered list*/
+/*Cool unordered list*/
 .imglist ul{
   margin:0px;
 }
@@ -178,9 +181,9 @@ nav form {
 .imglist li a:hover{
   color:#303C41;
   padding:2px;
-  -moz-box-shadow: 0px 0px 12px #9e9ea3;
-  -webkit-box-shadow: 0px 0px 12px #9e9ea3;
-  box-shadow: 0px 0px 12px #9e9ea3;
+  -moz-box-shadow: 0px 0px 12px #C3FB48;
+  -webkit-box-shadow: 0px 0px 12px #C3FB48;
+  box-shadow: 0px 0px 12px #C3FB48;
   border:none 0px #000000;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
