@@ -10,6 +10,7 @@
   top: 0px;
   left:0px;
 }
+
 #header h1 {
   color: #1BBC9B;
   float: left;
@@ -26,7 +27,6 @@
   left: 25%;
   padding: 20px;
   visibility: visible;
-
 }
 
 .signin {
