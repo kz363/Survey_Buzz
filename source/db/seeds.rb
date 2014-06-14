@@ -1,4 +1,6 @@
-5.times {User.create(name: Faker::Name.name, email: Faker::Internet.email, password_hash: Faker::Internet.password)}
+User.create(name: "Kevin Zhou", email: "me@me.com", password: "asdf")
+
+5.times {User.create(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Internet.password)}
 
 10.times {Survey.create(title: Faker::Name.title, user_id: rand(1..5))}
 

@@ -59,6 +59,13 @@ $(document).ready(function() {
     $(this).next().show();
   });
 
+  $( document ).on('submit', '#survey_form', function(event){
+    event.preventDefault();
+    var survey_data = $(this).serialize();
+    console.log(survey_data);
+
+  });
+
 //////////////////////////SIGN UP/////////////////////////
 
   $(".signup form #button").on("click", function(event) {

@@ -18,8 +18,8 @@
   </div>
 </div>
 
-<!-- <div id='new_survey'>
-  <form action="/survey/new" method="post">
+<div id='new_survey'>
+  <form id="survey_form" action="/survey/new" method="post">
     <input type="text" name="title" placeholder="Title">
 
     <br><a href="" id="question_1"><h4>Question 1</h4></a>
@@ -31,7 +31,7 @@
   </form>
   <a href=""><button id="add_question" type="button">Add Question</button></a>
   <a href=""><button id="add_option" type="button">+</button></a>
-</div> -->
+</div>
 
 <div id='homepage'>
   <div class='surveys'>
@@ -55,9 +55,7 @@
     <% else %>
     <h3>You need to make some surveys!</h3>
     <% end %>
-    <form action="/new_survey" method="get">
-      <input type="submit" value="New Survey">
-    </form>
+    <button id="create_new_survey" type="button">New Survey</button>
 
   </div>
 </div>
