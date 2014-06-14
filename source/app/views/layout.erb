@@ -21,8 +21,8 @@
 </head>
 <body>
 <div id="header">
+  <img class="bird" src="../hummingbird.png"/>
   <h1>SurveyBuzz</h1>
-  <img src="../public/icon.jpg"/>
   <nav>
     <ul>
         <form action='/signout' method="get">
@@ -32,6 +32,8 @@
     </ul>
   </nav>
 </div>
+
   <%= yield %>
+  <div class="background-image"></div>
 </body>
 </html>
