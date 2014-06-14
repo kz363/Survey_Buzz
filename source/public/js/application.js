@@ -6,7 +6,6 @@ var isLoggedIn = $.ajax({
 
 isLoggedIn.done(function(response) {
   if (response.isLoggedIn === true) {
-    console.log(response.name)
     $('#modal').css("visibility","hidden");
     $('.surveys').css("visibility", "visible");
     $('#create input').css("visibility", "visible");
@@ -26,6 +25,7 @@ $(document).ready(function() {
   $( document ).on('click', '#create_new_survey', function(event){
     event.preventDefault();
     $( '#create_new_survey' ).hide();
+    $( '.surveys').hide();
     $( '#new_survey' ).show();
   });
 
@@ -45,6 +45,7 @@ $(document).ready(function() {
     var question = '<a href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
     $( '#new_survey form input:eq(-1)').before(question);
     currentQuestion = $('#new_survey div.question').length;
+    $(document).scrollTop($(document).height());
   });
 
   $( document ).on('click', '.remove_button', function(event){
@@ -58,6 +59,25 @@ $(document).ready(function() {
     currentQuestion = parseInt($(this).attr("id").slice(-1),10);
     $( '#new_survey div.question' ).hide();
     $(this).next().show();
+  });
+
+  $( document ).on('submit', '#survey_form', function(event){
+    event.preventDefault();
+    var survey_data = $(this).serialize();
+    console.log(survey_data);
+
+    var request = $.ajax( { url:"/survey",
+                            type: "POST",
+                            data: survey_data,
+                          });
+
+    request.done(function(response){
+      $( '#all_surveys' ).append( "<li><a href=''>"+response.title+"</a></li>" );
+      $( '.user_surveys ul' ).append( "<li><a href=''>"+response.title+"</a></li>" );
+      $( '#create_new_survey' ).show();
+      $( '.surveys').show();
+      $( '#new_survey' ).hide();
+    });
   });
 
 //////////////////////////SIGN UP/////////////////////////
