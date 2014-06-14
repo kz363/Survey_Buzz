@@ -15,5 +15,6 @@ post '/survey' do
     end
   end
 
-  return "Created '#{survey.title}' survey!"
+  content_type :json
+  {title: survey.title}.to_json
 end

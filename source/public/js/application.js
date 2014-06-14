@@ -6,7 +6,6 @@ var isLoggedIn = $.ajax({
 
 isLoggedIn.done(function(response) {
   if (response.isLoggedIn === true) {
-    console.log(response.name)
     $('#modal').css("visibility","hidden");
     $('.surveys').css("visibility", "visible");
     $('#create input').css("visibility", "visible");
@@ -66,15 +65,18 @@ $(document).ready(function() {
     event.preventDefault();
     var survey_data = $(this).serialize();
     console.log(survey_data);
+
     var request = $.ajax( { url:"/survey",
                             type: "POST",
                             data: survey_data,
                           });
+
     request.done(function(response){
+      $( '#all_surveys' ).append( "<li><a href=''>"+response.title+"</a></li>" );
+      $( '.user_surveys ul' ).append( "<li><a href=''>"+response.title+"</a></li>" );
       $( '#create_new_survey' ).show();
       $( '.surveys').show();
       $( '#new_survey' ).hide();
-      alert(response);
     });
   });
 
