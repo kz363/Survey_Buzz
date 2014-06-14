@@ -28,6 +28,17 @@ post '/signup' do
   end
 end
 
+get '/isLoggedIn' do
+  if session[:user_id]
+    isLoggedIn = true
+    name = User.find(session[:user_id]).name
+  else
+    isLoggedIn = false
+  end
+  content_type :JSON
+  {isLoggedIn:isLoggedIn, name:name}.to_json
+end
+
 # get '/user/surveys' do
 #   @user_surveys = Survey.find_by_id(session[:user_id])
 # end

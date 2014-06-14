@@ -1,3 +1,21 @@
+
+var isLoggedIn = $.ajax({
+  url: "/isLoggedIn",
+  type: "GET"
+});
+
+isLoggedIn.done(function(response) {
+  if (response.isLoggedIn === true) {
+    console.log(response.name)
+    $('#modal').css("visibility","hidden");
+    $('.surveys').css("visibility", "visible");
+    $('#create input').css("visibility", "visible");
+    $('nav ul li#name').text(response.name);
+    $('div.user_surveys').css("visibility", "visible");
+    $('nav form input').css("visibility", "visible");
+  }
+})
+
 $(document).ready(function() {
 
 //////////////////////////SURVEY STUFF/////////////////////////
@@ -73,7 +91,7 @@ $(document).ready(function() {
         $('#modal').css("visibility","hidden");
         $('.surveys').css("visibility", "visible");
         $('#create input').css("visibility", "visible");
-        $('nav ul li #name').text(response.name);
+        $('nav ul li#name').text(response.name);
         $('div.user_surveys').css("visibility", "visible");
         $('nav form input').css("visibility", "visible");
       })
