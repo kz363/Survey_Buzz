@@ -102,7 +102,7 @@ button, input, optgroup, select, textarea {
 }
 
 button#exit {
-  background-color: #0072c6;
+  background-color: #C3FB48;
   border: none;
   font-size: 30px;
   background-image: none;
@@ -110,11 +110,16 @@ button#exit {
 }
 
 #header h1 {
-  color: #0072c6;
+  color: #C3FB48;
   float: left;
   font-size: 40px;
   margin-left: 20px;
   margin-top: 33px;
+}
+
+div.results_page {
+  margin-top: 200px;
+  margin-bottom: 1000px;
 }
 
 #new_survey {

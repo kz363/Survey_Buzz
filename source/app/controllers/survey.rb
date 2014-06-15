@@ -13,13 +13,25 @@ post '/survey' do
                                   survey_id: survey.id )
     elsif field.to_s.start_with?("answer")
       Option.create( option: value,
-       question_id: question.id )
+                     question_id: question.id )
     end
   end
 
   content_type :json
   {title: survey.title, id: survey.id}.to_json
 end
+
+get '/survey/:survey_id/results' do
+  @survey = Survey.find(params[:survey_id])
+  @questions = @survey.questions
+  @user = User.find(session[:user_id])
+  if @user.surveys.include?(@survey)
+    erb :results
+  else
+    redirect '/'
+  end
+end
+
 
 
 
@@ -37,7 +49,7 @@ end
 
 put '/survey' do
   params.each do |question_id, option_id|
-    unless question_id.start_with?("_method")
+    unless question_id.start_with?("_method") || question_id.start_with?("survey_id")
       if session[:user_id]
         Result.create( user_id: session[:user_id],
           option_id: option_id )
@@ -46,6 +58,9 @@ put '/survey' do
       end
     end
   end
-  return "Survey Complete!"
+  @survey = Survey.find(params[:survey_id])
+
+  content_type :JSON
+  {title: @survey.title, id: @survey.id}.to_json
 end
 

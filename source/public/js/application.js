@@ -107,8 +107,9 @@ $(document).ready(function() {
 
     request.done(function(response){
       $( '#take_survey form' ).hide();
-      $( '#take_survey' ).append( "<h1>"+response+"</h1>" );
+      $( '#take_survey' ).append( "<h1>Survey Complete!</h1>" );
     });
+
   });
 
 
@@ -138,9 +139,10 @@ $(document).ready(function() {
         url: "/signup",
         type: "POST",
         data: {name: userName, email: userEmail, password: userPassword}
-      })
+      });
 
       request.done(function (response) {
+        $('#modal').hide();
         $('.surveys').css("visibility", "visible");
         $('#create input').css("visibility", "visible");
         $('nav ul li#name').text("Welcome, " + response.name);
