@@ -20,7 +20,7 @@ post '/survey' do
   end
 
   content_type :json
-  {title: @survey.title, id: @survey.id}.to_json
+  {title: survey.title, id: survey.id}.to_json
 end
 
 
