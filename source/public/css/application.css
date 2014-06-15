@@ -27,10 +27,39 @@ body {
 
 }
 
+
 .font {
   color: white;
   font-size: 25px;
   text-decoration: none;
+}
+
+div.survey_send_url {
+  background-color: #0072c6;
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  top: 25%;
+  left: 33%;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 4px 4px 4px #303C41;
+  display: none;
+}
+
+div.survey_send_url  h3 {
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+
+}
+
+div.survey_send_url ul {
+  list-style-type: none;
+
 }
 
 img.bird {
@@ -72,6 +101,14 @@ img.bird {
 button, input, optgroup, select, textarea {
   border-radius: 8px;
   border: 1px solid #b0b8bf;
+}
+
+button#exit {
+  background-color: #0072c6;
+  border: none;
+  font-size: 30px;
+  background-image: none;
+  color: none;
 }
 
 #header h1 {
