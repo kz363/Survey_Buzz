@@ -117,6 +117,11 @@ button#exit {
   margin-top: 33px;
 }
 
+div.results_page {
+  margin-top: 200px;
+  margin-bottom: 1000px;
+}
+
 #new_survey {
   position: absolute;
   top: 20%;

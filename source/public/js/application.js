@@ -139,9 +139,10 @@ $(document).ready(function() {
         url: "/signup",
         type: "POST",
         data: {name: userName, email: userEmail, password: userPassword}
-      })
+      });
 
       request.done(function (response) {
+        $('#modal').hide();
         $('.surveys').css("visibility", "visible");
         $('#create input').css("visibility", "visible");
         $('nav ul li#name').text("Welcome, " + response.name);

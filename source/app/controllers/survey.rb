@@ -13,7 +13,7 @@ post '/survey' do
                                   survey_id: survey.id )
     elsif field.to_s.start_with?("answer")
       Option.create( option: value,
-       question_id: question.id )
+                     question_id: question.id )
     end
   end
 
