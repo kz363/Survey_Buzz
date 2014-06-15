@@ -226,7 +226,10 @@ nav ul li {
   margin-right: 10px;
   display: inline;
   width: 50%;
-  /*visibility: hidden;*/
+}
+
+nav ul li input {
+  visibility: hidden;
 }
 
 #create {
