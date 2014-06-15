@@ -5,13 +5,15 @@ var isLoggedIn = $.ajax({
 
 isLoggedIn.done(function(response) {
   if (response.isLoggedIn === true) {
-    $('#modal').css("visibility","hidden");
     $('.surveys').css("visibility", "visible");
     $('#create input').css("visibility", "visible");
-    $('nav ul li#name').text(response.name);
+    $('nav ul li#name').text("Welcome, " + response.name);
     $('div.user_surveys').css("visibility", "visible");
-    $('nav form input').css("visibility", "visible");
+    $('nav ul li input').css("visibility", "visible");
     $('.background-image').css("z-index", "-1")
+  }
+  else {
+    $('#modal').show()
   }
 })
 
@@ -140,12 +142,11 @@ $(document).ready(function() {
       })
 
       request.done(function (response) {
-        $('#modal').css("visibility","hidden");
         $('.surveys').css("visibility", "visible");
         $('#create input').css("visibility", "visible");
         $('nav ul li#name').text("Welcome, " + response.name);
         $('div.user_surveys').css("visibility", "visible");
-        $('nav form input').css("visibility", "visible");
+        $('nav ul li input').css("visibility", "visible");
       })
     }
   })
@@ -180,13 +181,13 @@ $(document).ready(function() {
           $('#create input').css("visibility", "visible");
           $('nav ul li#name').text("Welcome, " + response.name);
           $('div.user_surveys').css("visibility", "visible");
-          $('nav form input').css("visibility", "visible");
+          $('nav ul li input').css("visibility", "visible");
       })
     }
   });
 
 ///////////////////////SIGN OUT////////////////////////////
-  $('nav form input').on("click", function(e) {
+  $('nav ul li input').on("click", function(e) {
     e.preventDefault();
 
     var request = $.ajax({
@@ -195,17 +196,18 @@ $(document).ready(function() {
       })
 
     request.done(function(respone){
-      $('#modal').css("visibility","visible");
-      $(".signup input[name='name']").val('');
-      $(".signup input[name='email']").val('');
-      $(".signup input[name='password']").val('');
-      $(".signin input[name='email']").val('');
-      $(".signin input[name='password']").val('');
-      $('.surveys').css("visibility", "hidden");
-      $('#create input').css("visibility", "hidden");
-      $('nav ul li#name').text('');
-      $('div.user_surveys').css("visibility", "hidden");
-      $('nav form input').css("visibility", "hidden");
+      // $('#modal').show();
+      // $(".signup input[name='name']").val('');
+      // $(".signup input[name='email']").val('');
+      // $(".signup input[name='password']").val('');
+      // $(".signin input[name='email']").val('');
+      // $(".signin input[name='password']").val('');
+      // $('.surveys').css("visibility", "hidden");
+      // $('#create input').css("visibility", "hidden");
+      // $('nav ul li#name').text('');
+      // $('div.user_surveys').css("visibility", "hidden");
+      // $('nav ul li input').css("visibility", "hidden");
+      location.reload();
     })
   })
 

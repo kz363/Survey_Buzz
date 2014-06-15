@@ -1,8 +1,6 @@
 post '/survey' do
   questionCount = 0
 
-
-
   survey = Survey.create( title: params[:title],
                           user_id: params[:user_id] )
 
