@@ -105,8 +105,9 @@ $(document).ready(function() {
 
     request.done(function(response){
       $( '#take_survey form' ).hide();
-      $( '#take_survey' ).append( "<h1>"+response+"</h1>" );
+      $( '#take_survey' ).append( "<h1>Survey Complete!</h1>" );
     });
+
   });
 
 
