@@ -76,7 +76,7 @@ $(document).ready(function() {
       $( '.surveys').fadeIn();
       $( '#new_survey' ).fadeOut();
       var domain = $("");
-      $( 'div.survey_send_url li a').attr("href", "/surveys/" + response.id);
+      $( 'div.survey_send_url li a').attr("href", "/survey/" + response.id);
       var surveyURL = $( 'div.survey_send_url li a').prop("href");
       $('div.survey_send_url li a').text(surveyURL);
       $( 'div.survey_send_url' ).fadeIn();
