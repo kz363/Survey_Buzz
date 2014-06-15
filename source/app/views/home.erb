@@ -40,7 +40,7 @@
     <% if @surveys %>
     <ul id="all_surveys" class="imglist">
       <% @surveys.each do |survey| %>
-      <li><a href=""><%=survey.title %></a></li>
+      <li><a href="/survey/<%=survey.id%>"><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% end %>
@@ -57,7 +57,7 @@
     <% if @user_surveys %>
     <ul class="your_surveys">
       <% @user_surveys.each do |survey| %>
-      <li><a href=""><%=survey.title %></a></li>
+      <li><a href="/survey/<%=survey.id%>"><%=survey.title %></a></li>
       <% end %>
     </ul>
     <% else %>
