@@ -224,6 +224,9 @@ nav ul {
 
 nav ul li {
   margin-right: 10px;
+  display: inline;
+  width: 50%;
+  /*visibility: hidden;*/
 }
 
 #create {
@@ -236,12 +239,6 @@ nav ul li {
   background:rgba(255,255,255,0.4);
   border-radius: 10px;
 
-}
-
-nav form {
-  width: 50%;
-  float: right;
-  visibility: hidden;
 }
 
 #name {

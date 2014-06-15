@@ -8,9 +8,9 @@ isLoggedIn.done(function(response) {
     $('#modal').css("visibility","hidden");
     $('.surveys').css("visibility", "visible");
     $('#create input').css("visibility", "visible");
-    $('nav ul li#name').text(response.name);
+    $('nav ul li#name').text("Welcome, " + response.name);
     $('div.user_surveys').css("visibility", "visible");
-    $('nav form input').css("visibility", "visible");
+    $('nav ul li input').css("visibility", "visible");
     $('.background-image').css("z-index", "-1")
   }
 })
@@ -144,7 +144,7 @@ $(document).ready(function() {
         $('#create input').css("visibility", "visible");
         $('nav ul li#name').text("Welcome, " + response.name);
         $('div.user_surveys').css("visibility", "visible");
-        $('nav form input').css("visibility", "visible");
+        $('nav ul li input').css("visibility", "visible");
       })
     }
   })
@@ -179,13 +179,13 @@ $(document).ready(function() {
           $('#create input').css("visibility", "visible");
           $('nav ul li#name').text("Welcome, " + response.name);
           $('div.user_surveys').css("visibility", "visible");
-          $('nav form input').css("visibility", "visible");
+          $('nav ul li input').css("visibility", "visible");
       })
     }
   });
 
 ///////////////////////SIGN OUT////////////////////////////
-  $('nav form input').on("click", function(e) {
+  $('nav ul li input').on("click", function(e) {
     e.preventDefault();
 
     var request = $.ajax({
@@ -204,7 +204,7 @@ $(document).ready(function() {
       $('#create input').css("visibility", "hidden");
       $('nav ul li#name').text('');
       $('div.user_surveys').css("visibility", "hidden");
-      $('nav form input').css("visibility", "hidden");
+      $('nav ul li input').css("visibility", "hidden");
     })
   })
 
