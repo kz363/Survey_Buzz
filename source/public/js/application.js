@@ -195,17 +195,18 @@ $(document).ready(function() {
       })
 
     request.done(function(respone){
-      $('#modal').show();
-      $(".signup input[name='name']").val('');
-      $(".signup input[name='email']").val('');
-      $(".signup input[name='password']").val('');
-      $(".signin input[name='email']").val('');
-      $(".signin input[name='password']").val('');
-      $('.surveys').css("visibility", "hidden");
-      $('#create input').css("visibility", "hidden");
-      $('nav ul li#name').text('');
-      $('div.user_surveys').css("visibility", "hidden");
-      $('nav ul li input').css("visibility", "hidden");
+      // $('#modal').show();
+      // $(".signup input[name='name']").val('');
+      // $(".signup input[name='email']").val('');
+      // $(".signup input[name='password']").val('');
+      // $(".signin input[name='email']").val('');
+      // $(".signin input[name='password']").val('');
+      // $('.surveys').css("visibility", "hidden");
+      // $('#create input').css("visibility", "hidden");
+      // $('nav ul li#name').text('');
+      // $('div.user_surveys').css("visibility", "hidden");
+      // $('nav ul li input').css("visibility", "hidden");
+      location.reload();
     })
   })
 
