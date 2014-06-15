@@ -5,13 +5,15 @@ var isLoggedIn = $.ajax({
 
 isLoggedIn.done(function(response) {
   if (response.isLoggedIn === true) {
-    $('#modal').css("visibility","hidden");
     $('.surveys').css("visibility", "visible");
     $('#create input').css("visibility", "visible");
     $('nav ul li#name').text("Welcome, " + response.name);
     $('div.user_surveys').css("visibility", "visible");
     $('nav ul li input').css("visibility", "visible");
     $('.background-image').css("z-index", "-1")
+  }
+  else {
+    $('#modal').show()
   }
 })
 
@@ -139,7 +141,6 @@ $(document).ready(function() {
       })
 
       request.done(function (response) {
-        $('#modal').css("visibility","hidden");
         $('.surveys').css("visibility", "visible");
         $('#create input').css("visibility", "visible");
         $('nav ul li#name').text("Welcome, " + response.name);
@@ -194,7 +195,7 @@ $(document).ready(function() {
       })
 
     request.done(function(respone){
-      $('#modal').css("visibility","visible");
+      $('#modal').show();
       $(".signup input[name='name']").val('');
       $(".signup input[name='email']").val('');
       $(".signup input[name='password']").val('');
