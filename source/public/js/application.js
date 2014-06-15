@@ -41,7 +41,7 @@ $(document).ready(function() {
     event.preventDefault();
     questionTotal++;
     $( '#new_survey div.question' ).hide();
-    var question = '<a href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
+    var question = '<a class="font" href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
     $( '#new_survey form input:eq(-1)').before(question);
     currentQuestion = $('#new_survey div.question').length;
     $(document).scrollTop($(document).height());
