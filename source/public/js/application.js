@@ -44,7 +44,7 @@ $(document).ready(function() {
     questionTotal++;
     $( '#new_survey div.question' ).hide();
     var question = '<a class="font" href="" id="question_'+questionTotal+'"><h4>Question '+questionTotal+'</h4></a><div class="question"><input type="text" name="question_'+questionTotal+'" placeholder="Survey Question"><br><input type="text" name="answer_'+optionCount+'" placeholder="Option"></div>'
-    $( '#new_survey form input:eq(-1)').before(question);
+    $( '#new_survey form a:eq(-2)').before(question);
     currentQuestion = $('#new_survey div.question').length;
     $(document).scrollTop($(document).height());
   });
