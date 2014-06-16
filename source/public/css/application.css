@@ -247,7 +247,8 @@ nav ul li input {
 }
 
 #create_new_survey {
-  margin-left: 90px;
+  margin-left: 130px;
+  text-align: center;
 }
 
 #name {
