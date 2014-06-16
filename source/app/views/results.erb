@@ -1,0 +1,13 @@
+<div class="results_page">
+  <h1>Results for <%=@survey.title%></h1>
+    <ul>
+      <% @survey.questions.each do |question| %>
+        <li><%=question.question%></li>
+          <ul>
+            <% question.options.each do |option| %>
+              <li><%=option.option%>: <%=(option.results.length / question.results.length)*100%>%</li>
+            <% end %>
+          </ul>
+      <% end %>
+    </ul>
+</div>

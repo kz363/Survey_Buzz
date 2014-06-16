@@ -24,7 +24,13 @@
 body {
   font-family: 'Josefin Slab', serif;
   color: #333;
+}
 
+
+.font {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 div.survey_send_url {
@@ -52,6 +58,7 @@ div.survey_send_url  h3 {
 
 div.survey_send_url ul {
   list-style-type: none;
+
 }
 
 img.bird {
@@ -71,7 +78,6 @@ img.bird {
   position: fixed;
   top: 0px;
   left:0px;
-  /*border-bottom: 1px solid #C3FB48;*/
 }
 
 #button {
@@ -96,7 +102,7 @@ button, input, optgroup, select, textarea {
 }
 
 button#exit {
-  background-color: #0072c6;
+  background-color: #C3FB48;
   border: none;
   font-size: 30px;
   background-image: none;
@@ -109,6 +115,11 @@ button#exit {
   font-size: 40px;
   margin-left: 20px;
   margin-top: 33px;
+}
+
+div.results_page {
+  margin-top: 200px;
+  margin-bottom: 1000px;
 }
 
 #new_survey {
@@ -126,7 +137,6 @@ button#exit {
 
 #modal {
   border: #303C41 solid 3px;
-  /*background-color: #fefefe;*/
   background-image: linear-gradient(rgba(255, 255, 255, 0.901961), rgba(220, 236, 255, 0.701961));
   background: linear-gradient(rgba(255,255,255,0.9),rgba(220,236,255,0.7));
   width: 500px;
@@ -135,7 +145,7 @@ button#exit {
   top: 25%;
   left: 33%;
   padding: 20px;
-  visibility: visible;
+  display: none;
   border-radius: 10px;
   color: #303C41;
   box-shadow: 4px 4px 4px #303C41;
@@ -187,7 +197,7 @@ button, input, optgroup, select, textarea {
 
 .surveys h2 {
   font-size: 30px;
-  font-color: #fff;
+  font-color: white;
 }
 
 .user_surveys {
@@ -195,10 +205,8 @@ button, input, optgroup, select, textarea {
   height: 100%;
   float: left;
   width: 20%;
-  /*background-color: #E8E8E8;*/
   background-color: #454545;
   visibility: hidden;
-  /*border-right: 1px solid #C3FB48;*/
   min-width: 300px;
 }
 
@@ -216,6 +224,12 @@ nav ul {
 
 nav ul li {
   margin-right: 10px;
+  display: inline;
+  width: 50%;
+}
+
+nav ul li input {
+  visibility: hidden;
 }
 
 #create {
@@ -223,21 +237,12 @@ nav ul li {
 }
 
 #all_surveys {
-  /*border: 1px solid #C3FB48;*/
-  /*background-color: #D1CCD2;*/
   background:rgba(255,255,255,0.4);
   border-radius: 10px;
 
 }
 
-nav form {
-  width: 50%;
-  float: right;
-  visibility: hidden;
-}
-
 #name {
-  float: right;
   font-size: 20px;
   color: #C3FB48;
 }
@@ -246,6 +251,10 @@ nav form {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+#new_survey form input {
+  width: 300px;
+  height: 40px;
 }
 
 /*Your Surveys*/
@@ -269,10 +278,6 @@ nav form {
 .your_surveys li a:hover{
   color:#D1CCD2;
   padding:2px;
-  /*Box Shadows*/
-  /*-moz-box-shadow: 0px 0px 12px #303C41;
-  -webkit-box-shadow: 0px 0px 12px #303C41;
-  box-shadow: 0px 0px 12px #D1CCD2;*/
   border:none 0px #000000;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -301,10 +306,6 @@ nav form {
 .imglist li a:hover{
   color:#C3FB48;
   padding:2px;
-  /*Box Shadows*/
-  /*-moz-box-shadow: 0px 0px 12px #303C41;
-  -webkit-box-shadow: 0px 0px 12px #303C41;
-  box-shadow: 0px 0px 12px #D1CCD2;*/
   border:none 0px #000000;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -314,3 +315,8 @@ nav form {
 #take_survey {
   padding-top: 5%;
 }
+.user_surveys h2 {
+  font-size: 30px;
+  color: white;
+}
+

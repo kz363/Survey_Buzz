@@ -4,6 +4,7 @@
   <%else%>
   <form action="/survey" method="post">
     <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="survey_id" value="<%=@survey.id%>">
     <%@survey.questions.each_with_index do |question, index|%>
     <h4><%="#{index+1}. #{question.question}"%><h4>
     <%question.options.each do |option|%>
