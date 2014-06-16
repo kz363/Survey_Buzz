@@ -323,8 +323,9 @@ nav ul li input {
 #take_survey {
   padding-top: 5%;
 }
+
 .user_surveys h2 {
   font-size: 30px;
   color: white;
-  padding-left: 10px;
+  text-align: center;
 }
