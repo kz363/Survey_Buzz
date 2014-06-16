@@ -246,6 +246,10 @@ nav ul li input {
 
 }
 
+#create_new_survey {
+  margin-left: 90px;
+}
+
 #name {
   font-size: 20px;
   color: #C3FB48;
@@ -322,4 +326,5 @@ nav ul li input {
 .user_surveys h2 {
   font-size: 30px;
   color: white;
+  padding-left: 10px;
 }
