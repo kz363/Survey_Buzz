@@ -276,11 +276,14 @@ nav ul li input {
   padding:0px;
   list-style:url(/images/check.png);
   line-height:30px;
+
 }
+
 
 .your_surveys li a:link, .your_surveys li a:visited{
   color: #303C41;
   text-decoration:none;
+  color: white;
 }
 
 .your_surveys li a:hover{
