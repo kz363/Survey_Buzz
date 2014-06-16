@@ -26,6 +26,10 @@ body {
   color: #333;
 }
 
+#add_question {
+  color: #333;
+}
+
 
 .font {
   color: white;
@@ -319,4 +323,3 @@ nav ul li input {
   font-size: 30px;
   color: white;
 }
-
