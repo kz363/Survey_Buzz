@@ -1,26 +1,27 @@
-Survey_Buzz
+Survey Buzz
 ===========
+<h2>A survey making app that allows users to create surveys, take other users surveys and view results.</h2>
+
+
+
+
 ![](survey_buzz_schema.png)
-User
+<h2>User stories</h2>
 create account, log in/ log out, create survey, delete survey, edit survey
 see all their surveys
 homepage: display all surveys
   has_many :surveys
   take a survey if you have link
 
-
-
 Survey
   can be made private
   has many questions
   belongs_to :user
   
-  
 Questions
   question
   has_many :options
   belongs_to :survey
-  
   
 Options
   belongs_to :question
