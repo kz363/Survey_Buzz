@@ -1,11 +1,10 @@
 Survey Buzz
 ===========
 <h2>A survey making app that allows users to create surveys, take other users surveys and view results.</h2>
-<h3><a href='suverybuzz.herokuapp.com'></a></h3>
+<h3> <a href="suverybuzz.herokuapp.com">Survery Buzz</a></h3>
 
 
 
-![](survey_buzz_schema.png)
 <h2>User stories</h2>
 create account, log in/ log out, create survey, delete survey, edit survey
 see all their surveys
